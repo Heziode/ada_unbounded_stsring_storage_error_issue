@@ -8,7 +8,7 @@ use Ada.Characters.Handling;
 use Ada.Strings.Unbounded;
 use Ada.Text_IO;
 
-procedure Main is
+procedure With_File is
    package L renames Ada.Characters.Latin_1;
 
    procedure Read (File   :        File_Type;
@@ -77,4 +77,4 @@ begin
    Close (File);
 
    Put_Line ("""" & Req_File_Path_Not_Working & """ size: " & Natural'Image (Length (UStr)));
-end Main;
+end With_File;
