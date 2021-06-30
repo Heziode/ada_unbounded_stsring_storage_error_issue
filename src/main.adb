@@ -57,7 +57,7 @@ begin
    Put_Line ("Max Natural: " & Natural'Image (Natural'Last));
 
    -- Working Version (2048000 bytes)
-   -- Generated with: dd if=/dev/zero of=output_working.txt  bs=2048000  count=1
+   -- Generated with: perl -e 'print "a" x 2048000' > output_working.txt
 
    Open_File (File => File,
               Mode => In_File,
@@ -68,7 +68,7 @@ begin
    Put_Line ("""" & Req_File_Path_Working & """ size: " & Natural'Image (Length (UStr)));
 
    -- Not working exemple (just 1 more byte than the working version)
-   -- Generated with: dd if=/dev/zero of=output_working.txt  bs=2048001  count=1
+   -- Generated with: perl -e 'print "a" x 2048001' > output_working.txt
 
    Open_File (File => File,
               Mode => In_File,
