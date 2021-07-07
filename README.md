@@ -6,4 +6,4 @@ However, this example shows an error (Storage_Error) when the Unbounded_String t
 
 ---
 
-This problem is due to some limitation of the implementation of `Get_Line`, that is recursive. On UNIX OS (Linux, MacoOS) the max recursivity is defined with `ulimit -s`.
+This problem is due to some limitation of the implementation of `Get_Line`, that is recursive. On UNIX OS (Linux, MacOS) the max recursivity is defined with `ulimit -s`.
